@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+.ad-space{
+  text-align: center;
+}
+.login{
+  text-align:right;
+}
+.login-system{
+  text-align: right;
+  position:relative;
+  right:150px; 
+}
