@@ -8,6 +8,7 @@
       {{> articles}}
 
     </div>
+    {{> articleCreator}}
 </body>
 <template name="header">
   <header class="page-header">
@@ -26,8 +27,19 @@
     </nav>
   </header>
 </template>
+
 <template name="articles">
   {{#each article in articles}}
-    <li><a href="{{article.url}}" target="_blank">{{article.title}}</a></li>
+    <h3>{{article.title}}</h3>
+    <h4>created by : {{article.createdBy}} at : {{article.createdAt}}</h4>
+    <p>{{article.text}}</p>
   {{/each}}
+</template>
+
+<template name="articleCreator">
+    <form class="article-creator"  method="post">
+        <input type="text" name="title" placeholder="article-title"> <br>
+        <textarea name="text" rows="8" cols="80" placeholder="article Content goes here"></textarea><br>
+        <button type="submit" >submit</button>
+    </form>
 </template>
