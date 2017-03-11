@@ -1,12 +1,47 @@
 /* CSS declarations go here */
-.ad-space{
-  text-align: center;
+  body { 
+    padding:0px;
+    margin: 0px;
+  }
+  .page-header{
+    width:100%;
+    background-color:  #E85656;
+  }
+  .main-nav{
+    height: 60px;
+    width: calc(100% - 20px);
+    position: absolute;
+    top:0px;
+    background-color: #E85656;
+    padding-left: 20px;
+  }
+  .articles{
+    margin-top:60px;
+  }
+    
+#logo{
+  width:50px;
+  position: absolute;
+  top :5px;
 }
-.login{
-  text-align:right;
+.nav-list{
+    list-style-type: none;
+    margin-left: 50px;
+
+}
+.nav-list  li {
+  display: inline;
+  margin-left: 20px;
+}
+.nav-list a {
+  text-decoration: none; 
+  color:#f1beba;
+  font-family: 'Changa', sans-serif;
+}
+.nav-list a:hover , a:active {
+  color:white;
 }
 .login-system{
   text-align: right;
-  position:relative;
-  right:150px; 
+  margin-right: 250px;
 }

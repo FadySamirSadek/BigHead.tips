@@ -1,17 +1,33 @@
 <body>
-  <div class="container">
-    <header class="page-header">
-      <h1>BigHead.tips</h1>
-      <div class="login-system">
-         {{> loginButtons}}
-      </div>
-    </header>
-    <div class="jumbotron ad-space">
-      <p>This is an ad-space</p>
-    </div>
+    {{> header}}
+    
     {{#if currentUser}}
       <h3>Welcome bsa3adtak</h3>
     {{/if}}
-    
-  </div>
+    <div class="articles">
+      {{> articles}}
+
+    </div>
 </body>
+<template name="header">
+  <header class="page-header">
+    <nav class="main-nav">
+      <a href="http://bighead.tips">
+        <h1><img src="bighead.svg" id="logo" alt="BigHead.tips"></h1>
+      </a>
+      <ul class="nav-list">
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Learning Path</a></li>
+        <li><a href="#">Videos</a></li>
+      </ul>
+      <div class="login-system">
+         {{> loginButtons}}
+      </div>
+    </nav>
+  </header>
+</template>
+<template name="articles">
+  {{#each article in articles}}
+    <li><a href="{{article.url}}" target="_blank">{{article.title}}</a></li>
+  {{/each}}
+</template>
