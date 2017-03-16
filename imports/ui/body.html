@@ -1,9 +1,11 @@
 <body>
     {{> header}}
-    
+    {{> navigation}}
+    <!--
     {{#if currentUser}}
       <h3>Welcome bsa3adtak</h3>
     {{/if}}
+    -->
     <div class="articles">
       {{> articles}}
 
@@ -11,21 +13,30 @@
     {{> articleCreator}}
 </body>
 <template name="header">
-  <header class="page-header">
+  <header>
+      <h1>    <a href="http://bighead.tips"><img src="bighead.svg" id="logo" alt="BigHead.tips"></a></h1>
+    
+    <ul class="social-media">
+      <li><i class="fa fa-facebook-official"></i></li>
+      <li><i class="fa fa-twitter-square" aria-hidden="true"></i></li>
+      <li><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
+    </ul>
+  </header>
+</template>
+<template name="navigation">
+  <div class="page-navigation">
     <nav class="main-nav">
-      <a href="http://bighead.tips">
-        <h1><img src="bighead.svg" id="logo" alt="BigHead.tips"></h1>
-      </a>
       <ul class="nav-list">
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Learning Path</a></li>
-        <li><a href="#">Videos</a></li>
+        <li><a href="#">مقالات</a></li>
+        <li><a href="#">مسارات</a></li>
+        <li><a href="#">فيديو</a></li>
+        <li><a href="#">ازاي</a></li>
       </ul>
       <div class="login-system">
          {{> loginButtons}}
       </div>
     </nav>
-  </header>
+  </div>
 </template>
 
 <template name="articles">
