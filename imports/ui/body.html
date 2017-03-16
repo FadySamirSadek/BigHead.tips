@@ -6,11 +6,14 @@
       <h3>Welcome bsa3adtak</h3>
     {{/if}}
     -->
+    <!--
     <div class="articles">
       {{> articles}}
 
     </div>
     {{> articleCreator}}
+    -->
+    {{> footer}}
 </body>
 <template name="header">
   <header>
@@ -32,10 +35,15 @@
         <li><a href="#">فيديو</a></li>
         <li><a href="#">ازاي</a></li>
       </ul>
+      <!--
       <div class="login-system">
          {{> loginButtons}}
       </div>
+    -->
     </nav>
+  </div>
+  <div class="ad-placement">
+    مساحة اعلانية
   </div>
 </template>
 
@@ -46,7 +54,11 @@
     <p>{{article.text}}</p>
   {{/each}}
 </template>
-
+<template name = "footer">
+  <footer>
+    <span class="copyrights">Copyrights reserved &copy; BigHead.Tips 2017</span>
+  </footer>
+</template>
 <template name="articleCreator">
     <form class="article-creator"  method="post">
         <input type="text" name="title" placeholder="article-title"> <br>
