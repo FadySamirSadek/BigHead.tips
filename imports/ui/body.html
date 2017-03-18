@@ -74,6 +74,15 @@
         <button type="submit" >submit</button>
     </form>
 </template>
+
 <template name="termsOfService">
   terms of service
+</template>
+
+<template name="editor">
+<input type="text" name="title" placeholder="Title"><br>
+<textarea class="content" name="content" rows="8" cols="80"></textarea>
+<div class="preview">
+  {{#markdown}}{{text}}{{/markdown}}
+</div>
 </template>
