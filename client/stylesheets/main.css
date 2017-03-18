@@ -57,6 +57,11 @@
 .nav-list a:hover , a:active {
   color:white;
 }
+.container{
+  position:absolute;
+  top:185px;
+  width:100%;
+}
 .social-media{
   list-style-type: none;
   position: relative;
@@ -83,13 +88,12 @@
 .ad-placement{
   height: 90px;
   width:728px;
-  background-color: #e85656;
   position: relative;
   top:190px;
   display: block;
    margin-left: auto;
    margin-right: auto;
-   text-align: center;
+   background: url('assets/ads.png');
 }
 footer{
   position: absolute;
@@ -104,6 +108,7 @@ footer{
   text-align: center;
   color: white;
   font-family: 'Changa', sans-serif;
+  overflow:hidden;
 }
 .copyrights{
   position: absolute;

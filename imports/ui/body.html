@@ -1,6 +1,7 @@
 <body>
     {{> header}}
-    {{> navigation}}
+    {{>  navigation}}
+    {{> applicationLayout}}
     <!--
     {{#if currentUser}}
       <h3>Welcome bsa3adtak</h3>
@@ -15,9 +16,14 @@
     -->
     {{> footer}}
 </body>
+<template name="applicationLayout">
+  <div class="container">
+    {{>Template.dynamic template=main}}
+  </div>
+</template>
 <template name="header">
   <header>
-      <h1>    <a href="http://bighead.tips"><img src="bighead.svg" id="logo" alt="BigHead.tips"></a></h1>
+      <h1>    <a href="http://bighead.tips"><img src="/assets/bighead.svg" id="logo" alt="BigHead.tips"></a></h1>
     
     <ul class="social-media">
       <li><i class="fa fa-facebook-official"></i></li>
@@ -42,9 +48,6 @@
     -->
     </nav>
   </div>
-  <div class="ad-placement">
-    مساحة اعلانية
-  </div>
 </template>
 
 <template name="articles">
@@ -53,6 +56,8 @@
     <h4>created by : {{article.createdBy}} at : {{article.createdAt}}</h4>
     <p>{{article.text}}</p>
   {{/each}}
+  <div class="ad-placement">
+  </div>
 </template>
 <template name = "footer">
   <footer>
@@ -65,4 +70,7 @@
         <textarea name="text" rows="8" cols="80" placeholder="article Content goes here"></textarea><br>
         <button type="submit" >submit</button>
     </form>
+</template>
+<template name="termsOfService">
+  terms of service
 </template>
