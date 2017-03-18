@@ -1,12 +1,18 @@
 /* CSS declarations go here */
-  body { 
-    padding:0px;
-    margin: 0px;
+html,body { 
+  padding:0px;
+  min-height: 100%;
+}
+html {
+    position: relative;
+}
+  body{
+    margin: 0 0 100px; /* bottom = footer height */
   }
   header{
     width:100%;
     height: 190px;
-    position: absolute;
+    position: static;
     top:0px;
     background-color:#fff;
   }
@@ -58,8 +64,6 @@
   color:white;
 }
 .container{
-  position:absolute;
-  top:185px;
   width:100%;
 }
 .social-media{
@@ -96,6 +100,7 @@
    background: url('assets/ads.png');
 }
 footer{
+  overflow:hidden;
   position: absolute;
   bottom:0px;
   width:100%;
@@ -108,13 +113,5 @@ footer{
   text-align: center;
   color: white;
   font-family: 'Changa', sans-serif;
-  overflow:hidden;
-}
-.copyrights{
-  position: absolute;
-  left: 20px; 
-  bottom:10px;
-  margin-left: auto; 
-  margin-right: auto; 
-  width: 400px;
+  margin-top: 10px;
 }
