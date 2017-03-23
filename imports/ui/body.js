@@ -22,6 +22,26 @@ Template.writer.helpers({
   },
   
 });
+Template.applicationLayout.events({
+  'click'(event){
+    const modal = document.getElementById('myModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+});
+Template.writer.events({
+    'click .createNew'(event){
+      event.preventDefault();
+      const modal = document.getElementById('myModal');
+      modal.style.display = "block";
+    },
+    'click .close'(event){
+      const modal = document.getElementById('myModal');
+      modal.style.display = "none";
+    }
+});
+
 Template.articleCreator.events({
     'submit  .article-creator'(event){
       event.preventDefault();

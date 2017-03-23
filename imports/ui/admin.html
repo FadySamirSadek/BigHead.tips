@@ -4,13 +4,21 @@
   </header>
   <div class="page-navigation">
     <nav class="main-nav">
-      <ul class="nav-list">
-        <li><a href="./createArticle">انشاء</a></li>
-      </ul>
     </nav>
   </div>
 </template>
 <template name="writer">
+  <button type="button" class="createNew" name="createNew">create New</button>
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
   {{#each article in articles}}
     <h3>{{article.title}}</h3>
     <h4>created by : {{article.createdBy}} at : {{article.createdAt}}</h4>
