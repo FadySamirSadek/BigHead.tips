@@ -1,3 +1,32 @@
-<template name="admin">
-  Hello admins
+<template name="admin-header">
+  <header>
+      <h1>    <a href="http://bighead.tips"><img src="/assets/bighead.svg" id="logo" alt="BigHead.tips"></a></h1>
+  </header>
+  <div class="page-navigation">
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="./createArticle">انشاء</a></li>
+      </ul>
+    </nav>
+  </div>
+</template>
+<template name="writer">
+  {{#each article in articles}}
+    <h3>{{article.title}}</h3>
+    <h4>created by : {{article.createdBy}} at : {{article.createdAt}}</h4>
+    <p>{{article.text}}</p>
+  {{/each}}
+</template>
+
+<template name="editor">
+  <div class="wrapper">
+    <div class="preview" dir="RTL">
+      {{#markdown}}{{text}}{{/markdown}}
+    </div>
+    <div class="editor">
+      <input type="text" class="title" name="" dir ="RTL" value="" placeholder="العنوان">
+      <input type="url" class="image-url" dir ="RTL" name="" value="" placeholder="صورة مصغرة" >
+      <textarea id="editor"  class="content" name="content"  rows="40" dir="RTL"></textarea>
+    </div>
+  </div>
 </template>

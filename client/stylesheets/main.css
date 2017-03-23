@@ -126,10 +126,20 @@ footer{
 .preview{
   width:50%;
   padding-right: 10px;
+  margin-top: 75px;
 }
 .editor{
   width:50%;
 }
 #editor{
+  margin-top: 50px;
   width:95%;
+}
+.title{
+  position: absolute;
+  right: 30px;
+  font-size: 1.5rem;
+}
+.image-url{
+  font-size:1.5rem;
 }

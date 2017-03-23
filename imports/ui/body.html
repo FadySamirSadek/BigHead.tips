@@ -1,27 +1,14 @@
 <body>
-    {{> header}}
-    {{>  navigation}}
     {{> applicationLayout}}
-    <!--
-    {{#if currentUser}}
-      <h3>Welcome bsa3adtak</h3>
-    {{/if}}
-    -->
-    <!--
-    <div class="articles">
-      {{> articles}}
-
-    </div>
-    {{> articleCreator}}
-    -->
     {{> footer}}
 </body>
 <template name="applicationLayout">
+  {{>Template.dynamic template=header}}
   <div class="container">
     {{>Template.dynamic template=main}}
   </div>
 </template>
-<template name="header">
+<template name="main-header">
   <header>
       <h1>    <a href="http://bighead.tips"><img src="/assets/bighead.svg" id="logo" alt="BigHead.tips"></a></h1>
     
@@ -31,8 +18,6 @@
       <li><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
     </ul>
   </header>
-</template>
-<template name="navigation">
   <div class="page-navigation">
     <nav class="main-nav">
       <ul class="nav-list">
@@ -51,11 +36,7 @@
 </template>
 
 <template name="articles">
-    {{#each article in articles}}
-      <h3>{{article.title}}</h3>
-      <h4>created by : {{article.createdBy}} at : {{article.createdAt}}</h4>
-      <p>{{article.text}}</p>
-    {{/each}}
+
   <!--
   <div class="ad-placement">
   </div>
@@ -77,15 +58,4 @@
 
 <template name="termsOfService">
   terms of service
-</template>
-
-<template name="editor">
-  <div class="wrapper">
-    <div class="preview" dir="RTL">
-      {{#markdown}}{{text}}{{/markdown}}
-    </div>
-    <div class="editor">
-      <textarea id="editor"  class="content" name="content"  rows="40" dir="RTL"></textarea>
-    </div>
-  </div>
 </template>
