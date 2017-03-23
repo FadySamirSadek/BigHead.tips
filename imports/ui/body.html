@@ -23,7 +23,7 @@
 </template>
 <template name="header">
   <header>
-      <h1>    <a href="http://bighead.tip"><img src="/assets/bighead.svg" id="logo" alt="BigHead.tips"></a></h1>
+      <h1>    <a href="http://bighead.tips"><img src="/assets/bighead.svg" id="logo" alt="BigHead.tips"></a></h1>
     
     <ul class="social-media">
       <li><i class="fa fa-facebook-official"></i></li>
@@ -80,9 +80,12 @@
 </template>
 
 <template name="editor">
-<input type="text" name="title" placeholder="Title"><br>
-<textarea class="content" name="content" rows="8" cols="80"></textarea>
-<div class="preview">
-  {{#markdown}}{{text}}{{/markdown}}
-</div>
+  <div class="wrapper">
+    <div class="preview" dir="RTL">
+      {{#markdown}}{{text}}{{/markdown}}
+    </div>
+    <div class="editor">
+      <textarea id="editor"  class="content" name="content"  rows="40" dir="RTL"></textarea>
+    </div>
+  </div>
 </template>
