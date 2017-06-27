@@ -1,49 +1,12 @@
-<template name="admin-header">
-  <header>
-      <h1>    <a href="http://bighead.tips"><img src="/assets/bighead.svg" id="logo" alt="BigHead.tips"></a></h1>
-  </header>
-  <div class="page-navigation">
-    <nav class="main-nav">
-    </nav>
-  </div>
-</template>
-<template name="writer">
-  <button type="button" class="createNew" name="createNew">create New</button>
-  <!-- The Modal -->
-<div id="myModal" class="modal">
+<template name="dashboard">
+  <h2>Create a new article:</h2>
+  <form class="new-article">
+    <input type="text" name="title" placeholder="title" required><br>
+    <input type="text" name="cover" placeholder="cover-img-url" required><br>
+    <input type="text" name="authorName" placeholder="Author name" required><br>
+    <input type="text" name="authorImg" placeholder="author img" required><br>
+    <textarea name="content"  placeholder="content" ></textarea>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>
-      <form class="new-article"  method="post">
-        <h2>Create a new article</h2>
-        <h3>Title:</h3>
-        <input type="text"  placeholder="Title" autofocus><br>
-        <h3>Thumnbail:</h3>
-        <input type="file"  placeholder="img.png"><br>
-        <button type="submit" name="button" class="create-new-article">Create</button>
-      </form>
-    </p>
-  </div>
-
-</div>
-  {{#each article in articles}}
-    <h3>{{article.title}}</h3>
-    <h4>created by : {{article.createdBy}} at : {{article.createdAt}}</h4>
-    <p>{{article.text}}</p>
-  {{/each}}
-</template>
-
-<template name="editor">
-  <div class="wrapper">
-    <div class="preview" dir="RTL">
-      {{#markdown}}{{text}}{{/markdown}}
-    </div>
-    <div class="editor">
-      <input type="text" class="title" name="" dir ="RTL" value="" placeholder="العنوان">
-      <input type="url" class="image-url" dir ="RTL" name="" value="" placeholder="صورة مصغرة" >
-      <textarea id="editor"  class="content" name="content"  rows="40" dir="RTL"></textarea>
-    </div>
-  </div>
+    <input type="submit" value="create">
+  </form>
 </template>

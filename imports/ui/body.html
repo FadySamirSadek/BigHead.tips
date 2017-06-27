@@ -11,7 +11,7 @@
 <template name="main-header">
   <header>
       <h1>    <a href="http://bighead.tips"><img src="/assets/bighead.svg" id="logo" alt="BigHead.tips"></a></h1>
-    
+
     <ul class="social-media">
       <li><i class="fa fa-facebook-official"></i></li>
       <li><i class="fa fa-twitter-square" aria-hidden="true"></i></li>
@@ -34,27 +34,21 @@
     </nav>
   </div>
 </template>
-
 <template name="articles">
-
-  <!--
-  <div class="ad-placement">
+  <div class="articles">
+    <ul>
+      {{#each articles}}
+        <li>{{title}}</li>
+      {{/each}}
+    </ul>
   </div>
--->
-
 </template>
 <template name = "footer">
   <footer>
     <span class="copyrights">Copyrights reserved &copy; BigHead.Tips 2017</span>
   </footer>
 </template>
-<template name="articleCreator">
-    <form class="article-creator"  method="post">
-        <input type="text" name="title" placeholder="article-title"> <br>
-        <textarea name="text" rows="8" cols="80" placeholder="article Content goes here"></textarea><br>
-        <button type="submit" >submit</button>
-    </form>
-</template>
+
 
 <template name="termsOfService">
   terms of service
