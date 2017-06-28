@@ -99,7 +99,7 @@ body{
    margin-right: auto;
    background: url('assets/ads.png');
 }
-footer{
+.main-footer{
   overflow:hidden;
   position: absolute;
   bottom:0px;
@@ -204,4 +204,73 @@ footer{
 /*Home page css*/
 .content{
   padding-top:200px;
+}
+/*Articles grid*/
+.article{
+  /*width will change later to 100% of the grid*/
+  direction: rtl;
+  width:300px;
+  height: 500px;
+  border:1px solid #e1e8ed;
+  border-radius: 5px;
+  margin-bottom:15px;
+}
+.article-title{
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+  font-size:18px;
+  color:#4a4a4a;
+  direction: rtl;
+
+}
+.article-preview{
+  width:300px;
+  height:207px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.article a:link {
+    text-decoration: none;
+}
+
+.article a:visited {
+    text-decoration: none;
+}
+
+.article a:hover {
+    text-decoration: underline;
+    -moz-text-decoration-color: black; /* Code for Firefox */
+   text-decoration-color: black;
+}
+
+.article a:active {
+    text-decoration: underline;
+    -moz-text-decoration-color: black; /* Code for Firefox */
+   text-decoration-color: black;
+}
+.article-teaser{
+  margin-top:65px;
+  color:#7d7d7d;
+  font-family: 'Cairo', sans-serif;
+
+
+}
+.author-img{
+  width:32px;
+  height:32px;
+  border-radius: 50%;
+  float: right;
+  margin-left:10px;
+
+}
+.publishing-info{
+  font-size:12px;
+  color:#7d7d7d;
+  font-family: 'Cairo', sans-serif;
+  padding-top:5px;
+  line-height: 15px;
+}
+.articles-list {
+  list-style-type: none;
+  direction: rtl;
 }

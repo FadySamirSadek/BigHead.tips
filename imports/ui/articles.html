@@ -1,0 +1,26 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+</head>
+<template name="articles">
+
+  <ul class="articles-list">
+    {{#each articles}}
+      <li>
+      <div class="article">
+        <header>
+          <img class="article-preview" src="{{cover}}" alt="">
+          <a href="#"><h1 class="article-title">{{title}} </h1></a>
+        </header>
+        <p class="article-teaser">
+          {{content}}
+        </p>
+        <footer>
+          <img class="author-img" src="{{authorImg}}" alt="">
+          <p class="publishing-info">{{authorName}} <br>{{createdAt}}</p>
+        </footer>
+      </div>
+      </li>
+
+    {{/each}}
+  </ul>
+</template>

@@ -26,11 +26,11 @@ Template.dashboard.events({
       createdAt:new Date(),
     });
 
-    target.title.text = '';
-    target.content.text = '';
-    target.cover.text = '';
-    target.authorName.text = '';
-    target.authorImg.text = '';
+    target.title.value = '';
+    target.content.value = '';
+    target.cover.value = '';
+    target.authorName.value = '';
+    target.authorImg.value = '';
 
   },
 });
