@@ -23,6 +23,7 @@ Template.dashboard.events({
       cover,
       authorName,
       authorImg,
+      url,
       createdAt:new Date(),
     });
 
@@ -31,6 +32,5 @@ Template.dashboard.events({
     target.cover.value = '';
     target.authorName.value = '';
     target.authorImg.value = '';
-
   },
 });
