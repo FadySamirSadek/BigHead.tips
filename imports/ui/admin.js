@@ -3,6 +3,8 @@ import {Articles} from '../api/articles.js';
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
 
+import moment from '../moment/moment-with-locale.js';
+
 Template.dashboard.events({
   'submit .new-article'(event) {
     event.preventDefault();
@@ -16,15 +18,16 @@ Template.dashboard.events({
     const authorImg = target.authorImg.value;
 
     //insert an new article into the collection
-    console.log(title);
+    moment.locale('ar-ly');
+    const date = moment().format('Do MMM YYYY');
+
     Articles.insert({
       title,
       content,
       cover,
       authorName,
       authorImg,
-      url,
-      createdAt:new Date(),
+      date,
     });
 
     target.title.value = '';
